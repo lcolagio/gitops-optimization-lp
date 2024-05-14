@@ -1,0 +1,22 @@
+{{- if .Values.appmetier1.include -}}
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: app-metier1
+  name: app-metier1
+  namespace: app-metier1  
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: app-metier1
+    deploymentconfig: app-metier1
+  sessionAffinity: None
+  type: ClusterIP
+
+{{- end }}
