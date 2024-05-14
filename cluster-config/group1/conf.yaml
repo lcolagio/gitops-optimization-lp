@@ -1,6 +1,0 @@
-# group1 configuration:
-  environment: group1
-  datacenter: us
-  cloud: AWS
-  region: us-est-2
-

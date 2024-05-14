@@ -1,8 +1,16 @@
+# cluster group1 configuration:
+environment: group1
+datacenter: us
+cloud: AWS
+region: us-est-2
+  
+
 # cluster configuration:
-  name: cluster-rdr2q
-  baseDomain: rdr2q.sandbox773.opentlc.com
-  fqdn: cluster-rdr2q.rdr2q.sandbox773.opentlc.com
-  address: "https://api.cluster-rdr2q.rdr2q.sandbox773.opentlc.com:6443"
+name: cluster-rdr2q
+baseDomain: rdr2q.sandbox773.opentlc.com
+fqdn: cluster-rdr2q.rdr2q.sandbox773.opentlc.com
+address: "https://api.cluster-rdr2q.rdr2q.sandbox773.opentlc.com:6443"
+
 
 # exemple application
 app-metier1:
