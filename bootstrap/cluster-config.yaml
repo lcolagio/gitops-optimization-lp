@@ -11,11 +11,11 @@ spec:
               repoURL: https://github.com/lcolagio/gitops-optimization-lp.git
               revision: master
               files:
-                - path: "clusters/**/conf.yaml"
+                - path: "configuration/**/conf.yaml"
           - list:
               elements:
                - template: app-metier1
-               - template: app-metier2               
+              #  - template: app-metier2               
   template:
     metadata:
       name: "config-{{cluster.environment}}-{{cluster.name}}-{{template}}"
