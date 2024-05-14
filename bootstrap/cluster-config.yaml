@@ -11,7 +11,8 @@ spec:
               repoURL: https://github.com/lcolagio/gitops-optimization-lp.git
               revision: master
               files:
-                - path: "configuration/**/conf.yaml"
+                - path: "cluster-config/*/conf.yaml"
+                - path: "cluster-config/**/conf.yaml"
           - list:
               elements:
                - template: app-metier1
@@ -33,8 +34,8 @@ spec:
         path: base/config/{{template}}
         helm:
           valueFiles:
-            - /configuration/{{cluster.environment}}/conf.yaml
-            - /configuration/{{cluster.environment}}/{{cluster.fqdn}}/conf.yaml
+            - /cluster-config/{{cluster.environment}}/conf.yaml
+            - /cluster-config/{{cluster.environment}}/{{cluster.fqdn}}/conf.yaml
       destination:
         server: "{{cluster.address}}"
       syncPolicy: {}
